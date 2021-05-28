@@ -1,0 +1,46 @@
+.burguer-container {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+}
+
+.linea {
+  height: 10%;
+  width: 80%;
+  background-color: black;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.linea1 {
+  top: 25%;
+}
+
+.linea3 {
+  top: 75%;
+}
+
+#burguer-ch {
+  display: none;
+}
+
+#burguer-ch:checked + .burguer-container .linea2 {
+  opacity: 0;
+}
+
+#burguer-ch:checked + .burguer-container .linea1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+  background-color: red;
+}
+
+#burguer-ch:checked + .burguer-container .linea3 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  background-color: red;
+}
